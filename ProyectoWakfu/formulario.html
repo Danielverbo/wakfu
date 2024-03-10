@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valoración de la página</title>
+    <script>
+        function mostrarAlerta() {
+        var valoracion = prompt("¿Cómo valorarías nuestra página? (1-5 estrellas)\n\n1. ★☆☆☆☆\n\n2. ★★☆☆☆\n\n3. ★★★☆☆\n\n4. ★★★★☆\n\n5. ★★★★★");
+    
+        if (valoracion !== null) {
+            alert("Gracias por tu valoración: " + valoracion + " estrellas!");
+        }
+        }
+    </script>
+        <style>
+            body{
+                background-image: url(imagenes/fondoFORM.jpeg);
+            }
+        </style>
+        <link rel="stylesheet" href="estilo/estilospersonajes/formulario.css">  
+</head>  
+<body>
+    <div class="principal">
+        <header>
+            <h1>¡Danos tu opinión sobre la página!</h1>
+        </header>
+
+            <main>
+                <form action="index.html" method="POST">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div>
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+        
+                    <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+        
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+        
+                    <div>
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                    <button onclick="mostrarAlerta()">¡Valora la página!</button>
+                    <button type="reset">Borrar formulario</button>
+                    <button type="submit">Enviar</button>
+                </form>
+            </main>
+    </div>
+</body>
+</html>
